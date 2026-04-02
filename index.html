@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osho Upadhyay — Software Engineer</title>
+  <meta name="description" content="Osho Upadhyay — Software Engineer & Node.js Backend Developer specialising in GenAI and Agentic AI, based in Pune, India." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body class="loading">
+
+  <!-- ── NOISE OVERLAY ─────────────────────────────────────────── -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ── PRELOADER ─────────────────────────────────────────────── -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__panel preloader__panel--top"></div>
+    <div class="preloader__panel preloader__panel--bottom"></div>
+    <div class="preloader__content">
+      <div class="preloader__initials">OU</div>
+      <div class="preloader__counter">0%</div>
+      <div class="preloader__bar">
+        <div class="preloader__bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CURSOR ────────────────────────────────────────────────── -->
+  <div id="cursorDot"  class="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursorRing" class="cursor-ring" aria-hidden="true">
+    <span class="cursor-ring__label"></span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════════ -->
+  <header id="nav" class="nav" role="banner">
+    <a href="#" class="nav__logo magnetic" data-cursor="HOME">
+      <div class="nav__logo-mark">OU</div>
+      <span>Osho.</span>
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="#about"      class="nav__link" data-cursor="NAV">About</a>
+      <a href="#skills"     class="nav__link" data-cursor="NAV">Skills</a>
+      <a href="#experience" class="nav__link" data-cursor="NAV">Work</a>
+      <a href="#projects"   class="nav__link" data-cursor="NAV">Projects</a>
+      <a href="#awards"     class="nav__link" data-cursor="NAV">Awards</a>
+      <a href="#contact"    class="nav__link" data-cursor="NAV">Contact</a>
+    </nav>
+    <a href="mailto:oshoupadhyayindia@gmail.com" class="nav__cta magnetic" data-cursor="MAIL">
+      Hire Me
+    </a>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero" aria-label="Introduction">
+
+    <!-- Particle canvas -->
+    <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+    <!-- Mouse-tracking gradient globs -->
+    <div class="hero__glob hero__glob--1" aria-hidden="true"></div>
+    <div class="hero__glob hero__glob--2" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+
+      <!-- Status badge -->
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        <span>Open to work</span>
+      </div>
+
+      <!-- Giant name — chars get split by hero.js -->
+      <div class="hero__name" aria-label="Osho Upadhyay">
+        <div class="hero__name-row">
+          <span id="heroNameOsho">OSHO</span>
+        </div>
+        <div class="hero__name-row">
+          <span id="heroNameUpadhyay">UPADHYAY</span>
+        </div>
+      </div>
+
+      <!-- Role line (clip-path reveal) -->
+      <div class="hero__role-wrap">
+        <p class="hero__role">Software Engineer&nbsp;&nbsp;·&nbsp;&nbsp;Node.js Backend Developer</p>
+      </div>
+
+      <!-- Bio + actions (opacity reveal) -->
+      <div class="hero__meta">
+        <p class="hero__bio">
+          Building intelligent backend systems and AI-powered products from
+          <strong>Pune, India</strong> — 3&plus; years turning complex problems
+          into elegant, scalable solutions.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary magnetic" data-cursor="EXPLORE">
+            <span>Explore Work</span>
+            <span class="btn__icon">↓</span>
+          </a>
+          <a href="mailto:oshoupadhyayindia@gmail.com" class="btn btn--ghost magnetic" data-cursor="MAIL">
+            Get in Touch
+          </a>
+        </div>
+        <div class="hero__social">
+          <a href="https://github.com/oshoup521"                             class="hero__social-link magnetic" target="_blank" rel="noopener" data-cursor="GH"  aria-label="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/osho-upadhyay-545001b1/"     class="hero__social-link magnetic" target="_blank" rel="noopener" data-cursor="LI"  aria-label="LinkedIn">LI</a>
+          <a href="https://twitter.com/oshoup521"                            class="hero__social-link magnetic" target="_blank" rel="noopener" data-cursor="TW"  aria-label="Twitter">TW</a>
+        </div>
+      </div>
+
+      <!-- Stats (opacity reveal + count-up) -->
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="3" data-suffix="+">0</div>
+          <div class="hero__stat-label">Years Exp</div>
+        </div>
+        <div class="hero__stat-div" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="6" data-suffix="">0</div>
+          <div class="hero__stat-label">Projects</div>
+        </div>
+        <div class="hero__stat-div" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <div class="hero__stat-value" data-count="3" data-suffix="">0</div>
+          <div class="hero__stat-label">Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-indicator__text">Scroll</span>
+      <div class="scroll-indicator__line"></div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="about" class="about section" aria-label="About Me">
+    <div class="section__inner">
+      <div class="about__grid">
+
+        <!-- Left: text -->
+        <div class="about__content">
+          <span class="reveal-text">About Me</span>
+          <h2 class="section__title reveal-title">
+            <span class="line-mask"><span class="line-inner">Crafting backends</span></span>
+            <span class="line-mask"><span class="line-inner" style="color:var(--purple-light)"><em>that scale.</em></span></span>
+          </h2>
+          <div class="about__desc">
+            <p class="reveal-para">
+              Software Engineer with <strong>3+ years</strong> designing scalable APIs and intelligent systems.
+              I work at the intersection of backend engineering and AI — bringing products from idea to production.
+            </p>
+            <p class="reveal-para">
+              Currently at <strong>Invimatic</strong>, building GenAI and Agentic AI solutions. Previously at
+              <strong>Pearlstone</strong> shipping production Node.js systems for thousands of users.
+            </p>
+          </div>
+          <div class="about__pills">
+            <span class="about__pill reveal-fade">🍳 Cooking</span>
+            <span class="about__pill reveal-fade">🌱 Gardening</span>
+            <span class="about__pill reveal-fade">✈️ Traveling</span>
+            <span class="about__pill reveal-fade">📚 Reading</span>
+          </div>
+        </div>
+
+        <!-- Right: floating card -->
+        <div>
+          <div class="about__card reveal-fade">
+            <div class="about__card-avatar">OU</div>
+            <div class="about__card-name">Osho Upadhyay</div>
+            <div class="about__card-role">Software Engineer · Node.js Developer</div>
+            <div class="about__card-info">
+              <div class="about__card-info-item"><span>📍</span><span>Pune, Maharashtra, India</span></div>
+              <div class="about__card-info-item"><span>✉️</span><span>oshoupadhyayindia@gmail.com</span></div>
+              <div class="about__card-info-item"><span>📞</span><span>+91 9044127435</span></div>
+            </div>
+            <div class="about__languages">
+              <div class="about__languages-title">Languages</div>
+              <div class="about__lang-chips">
+                <span class="about__lang-chip">Hindi · Native</span>
+                <span class="about__lang-chip">English · Professional</span>
+                <span class="about__lang-chip">Marathi · Elementary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="skills" class="skills section" aria-label="Skills">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="reveal-text">Technical Expertise</span>
+        <h2 class="section__title reveal-title">
+          <span class="line-mask"><span class="line-inner">My <em style="color:var(--purple-light)">Skillset</em></span></span>
+        </h2>
+      </div>
+
+      <div class="skills__grid">
+
+        <div class="skill-card reveal-fade" data-percent="90" data-color="#7c3aed" style="--skill-color:#7c3aed">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">Node.js</div>
+        </div>
+
+        <div class="skill-card reveal-fade" data-percent="85" data-color="#06b6d4" style="--skill-color:#06b6d4">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">Python</div>
+        </div>
+
+        <div class="skill-card reveal-fade" data-percent="85" data-color="#10b981" style="--skill-color:#10b981">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">MongoDB</div>
+        </div>
+
+        <div class="skill-card reveal-fade" data-percent="80" data-color="#f59e0b" style="--skill-color:#f59e0b">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">React</div>
+        </div>
+
+        <div class="skill-card reveal-fade" data-percent="75" data-color="#ec4899" style="--skill-color:#ec4899">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">GenAI / LLMs</div>
+        </div>
+
+        <div class="skill-card reveal-fade" data-percent="70" data-color="#8b5cf6" style="--skill-color:#8b5cf6">
+          <div class="skill-card__ring-wrap">
+            <svg class="skill-card__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="skill-card__ring-bg"   cx="60" cy="60" r="50"/>
+              <circle class="skill-card__ring-fill" cx="60" cy="60" r="50"/>
+            </svg>
+            <div class="skill-card__ring-value">0%</div>
+          </div>
+          <div class="skill-card__name">TypeORM</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="experience" class="experience section" aria-label="Work Experience">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="reveal-text">Career Path</span>
+        <h2 class="section__title reveal-title">
+          <span class="line-mask"><span class="line-inner">Work <em style="color:var(--purple-light)">Experience</em></span></span>
+        </h2>
+      </div>
+
+      <div class="experience__layout">
+
+        <!-- LEFT column — Invimatic -->
+        <div class="experience__items-left">
+          <div class="exp-item exp-item--left" style="opacity:0">
+            <div class="exp-item__card">
+              <div class="exp-item__period">2023 — Present</div>
+              <div class="exp-item__company">Invimatic</div>
+              <div class="exp-item__role">Software Engineer · Pune, India</div>
+              <p class="exp-item__desc">
+                Building GenAI and Agentic AI solutions, designing scalable backend APIs, and delivering intelligent automation. Leading AI-powered product development including a gamified learning platform and in-house customer support chatbot leveraging RAG architecture.
+              </p>
+              <div class="exp-item__chips">
+                <span class="exp-item__chip">Node.js</span>
+                <span class="exp-item__chip">Python</span>
+                <span class="exp-item__chip">GenAI</span>
+                <span class="exp-item__chip">MongoDB</span>
+                <span class="exp-item__chip">RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER — animated SVG line + dots -->
+        <div class="experience__timeline-line experience__dots-col">
+          <svg class="experience__timeline-svg" height="100%" width="3" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <line class="experience__track" x1="50%" y1="0" x2="50%" y2="100%" stroke-width="3"/>
+            <line class="experience__fill"  x1="50%" y1="0" x2="50%" y2="100%" stroke-width="3"/>
+          </svg>
+          <div class="exp-item__dot" style="top:2rem"></div>
+          <div class="exp-item__dot" style="top:calc(50% + 4rem)"></div>
+        </div>
+
+        <!-- RIGHT column — Pearlstone -->
+        <div class="experience__items-right">
+          <div class="exp-item exp-item--right" style="opacity:0">
+            <div class="exp-item__card">
+              <div class="exp-item__period">2020 — 2022</div>
+              <div class="exp-item__company">Pearlstone</div>
+              <div class="exp-item__role">Software Developer · India</div>
+              <p class="exp-item__desc">
+                Developed production Node.js backends with React frontends. Shipped a Pet Services Platform with live tracking, push notifications, and in-app chat. Implemented a referral system that significantly boosted user acquisition and engagement.
+              </p>
+              <div class="exp-item__chips">
+                <span class="exp-item__chip">Node.js</span>
+                <span class="exp-item__chip">React</span>
+                <span class="exp-item__chip">React Native</span>
+                <span class="exp-item__chip">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROJECTS  (horizontal pin)
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="projects section" aria-label="Projects">
+
+    <div class="projects__progress-wrap">
+      <div class="projects__progress-label">
+        <span>Selected Work</span>
+        <span>06 Projects</span>
+      </div>
+      <div class="projects__progress-bar">
+        <div class="projects__progress-fill" id="projectsProgressFill"></div>
+      </div>
+    </div>
+
+    <div class="section__header" style="max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3rem)">
+      <span class="reveal-text">Featured Work</span>
+      <h2 class="section__title reveal-title">
+        <span class="line-mask"><span class="line-inner">Featured <em style="color:var(--purple-light)">Projects</em></span></span>
+      </h2>
+    </div>
+
+    <div class="projects__pin-wrap">
+      <div class="projects__track-outer" id="projectsTrack">
+
+        <!-- 01 -->
+        <article class="project-card" data-color="#7c3aed" style="--project-color:#7c3aed">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#0f0a1e,#1a0f35)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">🎮</div>
+            <div class="project-card__num">01</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#a78bfa;border-color:rgba(167,139,250,0.3)">AI</span>
+              <span class="project-card__tag" style="color:#a78bfa;border-color:rgba(167,139,250,0.3)">Gamification</span>
+              <span class="project-card__tag" style="color:#a78bfa;border-color:rgba(167,139,250,0.3)">Education</span>
+            </div>
+            <h3 class="project-card__title">Gamified Learning Platform</h3>
+            <p class="project-card__desc">AI-powered soft skill development through simulations, XP rewards, and real-time team challenges.</p>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="project-card" data-color="#06b6d4" style="--project-color:#06b6d4">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#071a20,#0f2d36)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">🤖</div>
+            <div class="project-card__num">02</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#22d3ee;border-color:rgba(34,211,238,0.3)">RAG</span>
+              <span class="project-card__tag" style="color:#22d3ee;border-color:rgba(34,211,238,0.3)">VectorDB</span>
+              <span class="project-card__tag" style="color:#22d3ee;border-color:rgba(34,211,238,0.3)">GenAI</span>
+            </div>
+            <h3 class="project-card__title">Chatminds RAG Chatbot</h3>
+            <p class="project-card__desc">AI-powered chatbot for MSMEs built on RAG architecture — accurate, contextually relevant answers from business documents.</p>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="project-card" data-color="#10b981" style="--project-color:#10b981">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#071a13,#0e2d20)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">🐾</div>
+            <div class="project-card__num">03</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#34d399;border-color:rgba(52,211,153,0.3)">Node.js</span>
+              <span class="project-card__tag" style="color:#34d399;border-color:rgba(52,211,153,0.3)">React Native</span>
+              <span class="project-card__tag" style="color:#34d399;border-color:rgba(52,211,153,0.3)">MongoDB</span>
+            </div>
+            <h3 class="project-card__title">Pet Services Platform</h3>
+            <p class="project-card__desc">Full-featured pet app with live tracking, push notifications, and in-app chat for owners and service providers.</p>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="project-card" data-color="#f59e0b" style="--project-color:#f59e0b">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#1a1205,#2d1f0a)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">🚀</div>
+            <div class="project-card__num">04</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.3)">Web</span>
+              <span class="project-card__tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.3)">Mobile</span>
+              <span class="project-card__tag" style="color:#fbbf24;border-color:rgba(251,191,36,0.3)">Growth</span>
+            </div>
+            <h3 class="project-card__title">Referral System</h3>
+            <p class="project-card__desc">Referral program that boosted user acquisition and engagement across web and mobile client products.</p>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="project-card" data-color="#ec4899" style="--project-color:#ec4899">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#1a071a,#2d0f2d)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">💬</div>
+            <div class="project-card__num">05</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#f472b6;border-color:rgba(244,114,182,0.3)">GenAI</span>
+              <span class="project-card__tag" style="color:#f472b6;border-color:rgba(244,114,182,0.3)">Chatbot</span>
+              <span class="project-card__tag" style="color:#f472b6;border-color:rgba(244,114,182,0.3)">NLP</span>
+            </div>
+            <h3 class="project-card__title">Customer Support AI</h3>
+            <p class="project-card__desc">In-house GenAI chatbot that improved response times and customer satisfaction with intelligent automation.</p>
+          </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="project-card" data-color="#8b5cf6" style="--project-color:#8b5cf6">
+          <div class="project-card__bg" style="background:linear-gradient(135deg,#0f0a1e,#1a1035)"></div>
+          <div class="project-card__glow"></div>
+          <div class="project-card__body">
+            <div class="project-card__icon">⚽</div>
+            <div class="project-card__num">06</div>
+            <div class="project-card__tags">
+              <span class="project-card__tag" style="color:#c4b5fd;border-color:rgba(196,181,253,0.3)">NestJS</span>
+              <span class="project-card__tag" style="color:#c4b5fd;border-color:rgba(196,181,253,0.3)">WebSockets</span>
+              <span class="project-card__tag" style="color:#c4b5fd;border-color:rgba(196,181,253,0.3)">Real-time</span>
+            </div>
+            <h3 class="project-card__title">Sports Analytics Platform</h3>
+            <p class="project-card__desc">Social platform for sports enthusiasts — share performance, track activities, and engage with real-time analytics.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       AWARDS
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="awards" class="awards section" aria-label="Awards">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="reveal-text">Recognition</span>
+        <h2 class="section__title reveal-title">
+          <span class="line-mask"><span class="line-inner">Awards &amp; <em style="color:var(--purple-light)">Achievements</em></span></span>
+        </h2>
+      </div>
+
+      <div class="awards__grid">
+
+        <div class="award-card" data-index="0">
+          <div class="award-card__glow" aria-hidden="true"></div>
+          <span class="award-card__icon" aria-hidden="true">🏆</span>
+          <div class="award-card__date">March 2025</div>
+          <h3 class="award-card__title">Empathy Excellence Award</h3>
+          <p class="award-card__desc">Recognized for exceptional empathy and embodying core company values — empowerment, accountability, and integrity — at Technology Solutions Ltd.</p>
+        </div>
+
+        <div class="award-card" data-index="1">
+          <div class="award-card__glow" aria-hidden="true"></div>
+          <span class="award-card__icon" aria-hidden="true">🤖</span>
+          <div class="award-card__date">September 2025</div>
+          <h3 class="award-card__title">AI Champion Certificate</h3>
+          <p class="award-card__desc">Completed intensive AI training and finished a complex assignment in just 2 hours using AI-powered development tools — top of cohort.</p>
+        </div>
+
+        <div class="award-card" data-index="2">
+          <div class="award-card__glow" aria-hidden="true"></div>
+          <span class="award-card__icon" aria-hidden="true">🥈</span>
+          <div class="award-card__date">September 2025</div>
+          <h3 class="award-card__title">AI Hackathon — 2nd Place</h3>
+          <p class="award-card__desc">Led a team of 3–4 developers to deliver a full product in 4 hours, demonstrating innovation in AI-powered automation under extreme time pressure.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EDUCATION
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="education" class="education section" aria-label="Education">
+    <div class="section__inner">
+      <div class="section__header">
+        <span class="reveal-text">Academic Background</span>
+        <h2 class="section__title reveal-title">
+          <span class="line-mask"><span class="line-inner">Education</span></span>
+        </h2>
+      </div>
+
+      <div class="education__grid">
+
+        <div class="edu-card reveal-fade">
+          <div class="edu-card__icon">🎓</div>
+          <h3 class="edu-card__degree">PG Diploma in Advanced Computing</h3>
+          <div class="edu-card__school">Institute for Advanced Computing &amp; Software</div>
+          <div class="edu-card__meta">Sep 2022 — Mar 2023 &nbsp;·&nbsp; First Class Honors</div>
+          <p class="edu-card__note">Top performer in React &amp; Node.js. Specialised in Full Stack Development. Coursework: Advanced Java, Web Dev, Data Structures, Cloud Computing.</p>
+        </div>
+
+        <div class="edu-card reveal-fade">
+          <div class="edu-card__icon">💻</div>
+          <h3 class="edu-card__degree">B.Tech — Information Technology</h3>
+          <div class="edu-card__school">Pranveer Singh Institute of Technology (PSIT)</div>
+          <div class="edu-card__meta">Aug 2014 — May 2018</div>
+          <p class="edu-card__note">Four-year undergraduate program covering software engineering, data structures, algorithms, systems design, and networking fundamentals.</p>
+        </div>
+
+        <div class="edu-card reveal-fade">
+          <div class="edu-card__icon">📐</div>
+          <h3 class="edu-card__degree">Intermediate — 12th Grade</h3>
+          <div class="edu-card__school">UP Board</div>
+          <div class="edu-card__meta">2010 — 2012 &nbsp;·&nbsp; 76% — PCM</div>
+          <p class="edu-card__note">Physics, Chemistry, Mathematics stream.</p>
+        </div>
+
+        <div class="edu-card reveal-fade">
+          <div class="edu-card__icon">🔬</div>
+          <h3 class="edu-card__degree">High School — 10th Grade</h3>
+          <div class="edu-card__school">UP Board</div>
+          <div class="edu-card__meta">2008 — 2010 &nbsp;·&nbsp; 86% — Science</div>
+          <p class="edu-card__note">Science stream with strong foundation in mathematics and analytical thinking.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="contact section" aria-label="Contact">
+    <!-- Floating orb -->
+    <div class="contact__orb" aria-hidden="true"></div>
+
+    <div class="section__inner">
+      <div class="contact__grid">
+
+        <!-- Left: CTA text -->
+        <div>
+          <span class="reveal-text">Let's Connect</span>
+          <h2 class="contact__heading section__title" style="margin-top:1rem">
+            Got a project<br/>in <em style="color:var(--purple-light)">mind?</em>
+          </h2>
+          <p class="contact__sub" style="color:var(--muted);font-size:var(--fs-md);line-height:1.8;margin-top:1.5rem;max-width:420px">
+            I'm always open to new projects, creative ideas, and opportunities.
+            Whether it's a GenAI product or a robust backend — let's build it.
+          </p>
+          <div class="contact__cta" style="margin-top:2.5rem">
+            <a href="mailto:oshoupadhyayindia@gmail.com" class="btn btn--primary magnetic" data-cursor="MAIL" style="font-size:var(--fs-md);padding:1rem 2.5rem">
+              <span>Send me a message</span>
+              <span class="btn__icon">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: link list -->
+        <div class="contact__links">
+
+          <a href="mailto:oshoupadhyayindia@gmail.com" class="contact__link magnetic" data-cursor="MAIL" style="--link-color:#7c3aed">
+            <div class="contact__link-icon">✉️</div>
+            <div>
+              <div class="contact__link-label">Email</div>
+              <div class="contact__link-value">oshoupadhyayindia@gmail.com</div>
+            </div>
+            <span class="contact__link-arrow">↗</span>
+            <div class="contact__link-underline" style="position:absolute;bottom:0;left:0;right:0;height:2px;background:#7c3aed;transform:scaleX(0);transform-origin:left"></div>
+          </a>
+
+          <a href="tel:+919044127435" class="contact__link magnetic" data-cursor="CALL" style="--link-color:#06b6d4">
+            <div class="contact__link-icon">📞</div>
+            <div>
+              <div class="contact__link-label">Phone</div>
+              <div class="contact__link-value">+91 9044127435</div>
+            </div>
+            <span class="contact__link-arrow">↗</span>
+            <div class="contact__link-underline" style="position:absolute;bottom:0;left:0;right:0;height:2px;background:#06b6d4;transform:scaleX(0);transform-origin:left"></div>
+          </a>
+
+          <a href="https://github.com/oshoup521" class="contact__link magnetic" target="_blank" rel="noopener" data-cursor="VIEW" style="--link-color:#8b5cf6">
+            <div class="contact__link-icon">🐙</div>
+            <div>
+              <div class="contact__link-label">GitHub</div>
+              <div class="contact__link-value">github.com/oshoup521</div>
+            </div>
+            <span class="contact__link-arrow">↗</span>
+            <div class="contact__link-underline" style="position:absolute;bottom:0;left:0;right:0;height:2px;background:#8b5cf6;transform:scaleX(0);transform-origin:left"></div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/osho-upadhyay-545001b1/" class="contact__link magnetic" target="_blank" rel="noopener" data-cursor="VIEW" style="--link-color:#0ea5e9">
+            <div class="contact__link-icon">💼</div>
+            <div>
+              <div class="contact__link-label">LinkedIn</div>
+              <div class="contact__link-value">Osho Upadhyay</div>
+            </div>
+            <span class="contact__link-arrow">↗</span>
+            <div class="contact__link-underline" style="position:absolute;bottom:0;left:0;right:0;height:2px;background:#0ea5e9;transform:scaleX(0);transform-origin:left"></div>
+          </a>
+
+          <a href="https://twitter.com/oshoup521" class="contact__link magnetic" target="_blank" rel="noopener" data-cursor="VIEW" style="--link-color:#38bdf8">
+            <div class="contact__link-icon">🐦</div>
+            <div>
+              <div class="contact__link-label">Twitter</div>
+              <div class="contact__link-value">@oshoup521</div>
+            </div>
+            <span class="contact__link-arrow">↗</span>
+            <div class="contact__link-underline" style="position:absolute;bottom:0;left:0;right:0;height:2px;background:#38bdf8;transform:scaleX(0);transform-origin:left"></div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="section__inner">
+      <div class="footer__inner">
+        <p class="footer__copy">© 2025 Osho Upadhyay &mdash; Crafted with GSAP ScrollTrigger</p>
+        <p class="footer__loc">Pune, India 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── GSAP CDN ───────────────────────────────────────────────── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- ── Utils (load first) ─────────────────────────────────────── -->
+  <script src="assets/js/utils/split-text.js"></script>
+  <script src="assets/js/utils/magnetic.js"></script>
+
+  <!-- ── Modules ───────────────────────────────────────────────── -->
+  <script src="assets/js/modules/preloader.js"></script>
+  <script src="assets/js/modules/cursor.js"></script>
+  <script src="assets/js/modules/hero.js"></script>
+  <script src="assets/js/modules/skills.js"></script>
+  <script src="assets/js/modules/projects.js"></script>
+  <script src="assets/js/modules/experience.js"></script>
+  <script src="assets/js/modules/awards.js"></script>
+  <script src="assets/js/modules/contact.js"></script>
+
+  <!-- ── Boot ──────────────────────────────────────────────────── -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

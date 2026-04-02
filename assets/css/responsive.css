@@ -1,0 +1,212 @@
+/* ============================================================
+   RESPONSIVE.CSS — Breakpoints & Mobile Overrides
+   ============================================================ */
+
+/* ── Large (≤1280px) ─────────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .hero__name-char {
+    font-size: clamp(4rem, 12vw, 10rem);
+  }
+
+  .about__grid {
+    gap: var(--space-12);
+  }
+
+  .contact__grid {
+    gap: var(--space-10);
+  }
+}
+
+/* ── Medium (≤1024px) ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --section-py: clamp(4rem, 8vw, 7rem);
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__card {
+    max-width: 480px;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .experience__timeline-line {
+    display: none;
+  }
+
+  .experience__dots-col {
+    display: none;
+  }
+
+  .experience__items-left,
+  .experience__items-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .exp-item {
+    padding-bottom: var(--space-8);
+  }
+
+  .exp-item--right {
+    padding-top: 0;
+  }
+
+  .exp-item__dot {
+    display: none;
+  }
+
+  .nav__links {
+    gap: var(--space-5);
+  }
+}
+
+/* ── Tablet (≤768px) ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .hero__name-char {
+    font-size: clamp(3.5rem, 14vw, 7rem);
+  }
+
+  .hero__stats {
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+
+  .hero__stat-value {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .skill-card {
+    padding: var(--space-6);
+  }
+
+  .awards__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section__title {
+    font-size: clamp(var(--fs-2xl), 6vw, var(--fs-3xl));
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: clamp(280px, 85vw, 400px);
+    height: clamp(380px, 60vh, 520px);
+  }
+}
+
+/* ── Mobile (≤480px) ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero__name-char {
+    font-size: clamp(2.8rem, 16vw, 5rem);
+  }
+
+  .hero__badge {
+    font-size: 10px;
+  }
+
+  .hero__stats {
+    gap: var(--space-6);
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: var(--fs-xs);
+  }
+
+  .contact__link {
+    padding: var(--space-4);
+  }
+
+  .award-card {
+    padding: var(--space-6);
+  }
+
+  .about__card {
+    padding: var(--space-6);
+  }
+}
+
+/* ── No Hover (touch devices) ────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  .project-card {
+    transform: none !important;
+  }
+
+  .about__card {
+    transform: none !important;
+  }
+
+  .award-card {
+    transform: none !important;
+  }
+}
+
+/* ── Reduce Motion ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .noise-overlay {
+    display: none;
+  }
+
+  .hero__canvas {
+    display: none;
+  }
+}
