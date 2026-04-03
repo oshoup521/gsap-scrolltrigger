@@ -35,6 +35,9 @@
 
     /* ── Set track width ─────────────────────────────────── */
     function setupHorizontalScroll() {
+      // On mobile, skip horizontal pin — CSS handles vertical stack
+      if (window.innerWidth <= 768) return;
+
       // Get total scroll width minus one viewport
       var trackWidth  = track.scrollWidth;
       var viewportW   = window.innerWidth;

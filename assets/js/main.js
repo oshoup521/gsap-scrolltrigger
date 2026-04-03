@@ -91,6 +91,32 @@
       onLeaveBack: function () { nav.classList.remove('scrolled'); }
     });
 
+    /* ── Hamburger toggle ── */
+    var hamburger = document.getElementById('navHamburger');
+    if (hamburger) {
+      function closeMobileNav() {
+        nav.classList.remove('nav--open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('nav--open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+
+      /* Close on nav link click */
+      nav.querySelectorAll('.nav__link').forEach(function (link) {
+        link.addEventListener('click', closeMobileNav);
+      });
+
+      /* Close on Escape key */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMobileNav();
+      });
+    }
+
     /* Active link highlight */
     var links = nav.querySelectorAll('.nav__link');
     var sections = ['about','skills','experience','projects','awards','education','contact'];
